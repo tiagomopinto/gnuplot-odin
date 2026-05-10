@@ -1,6 +1,6 @@
 package gnuplot
 
-import "core:os/os2"
+import "core:os"
 import "core:sys/posix"
 import "core:fmt"
 
@@ -35,7 +35,7 @@ make_plot :: proc (
 
 		fmt.println( "Error creating gnuplot pipe!" )
 
-		os2.exit( 1 )
+		os.exit( 1 )
 	}
 
 	plot.type = type
